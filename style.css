@@ -1,0 +1,30 @@
+img.photo_héberge {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+:root {
+    --charte_bleu: #0065FC;
+    --charte_bleuc: #DEEBFF;
+    --charte_gris: #F2F2F2;
+}
+
+nav a {
+    text-decoration: none;
+}
+nav a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+nav a.blue:visited {
+    color: var(--charte_bleu);
+}
+
+.blue {
+    color: var(--charte_bleu)
+}
+.blue .grey {
+    color: var(--charte_gris);
+}
