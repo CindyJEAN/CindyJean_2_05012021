@@ -1,18 +1,87 @@
-img.photo_héberge {
-    object-fit: cover;
-    width: 100px;
-    height: 100px;
-}
-
 :root {
     --charte_bleu: #0065FC;
     --charte_bleuc: #DEEBFF;
     --charte_gris: #F2F2F2;
 }
 
-nav a {
-    text-decoration: none;
+body {
+    font-family: Raleway, sans-serif;
+    margin-left: 50px;
 }
+
+h2 {
+    font-weight: bold;
+}
+
+header ul {
+    display: grid;
+    grid: 35px 35px / 50% 50%;
+    justify-items: center;
+    align-items: center;
+}
+
+img.photo_héberge {
+    object-fit: cover;
+    width: 100px;
+    height: 100px;
+}
+
+input {
+    border: none;
+    margin-left: 15px;
+    font-size: 1.1rem;
+}
+
+
+input {
+}
+
+input:focus {
+    outline: none;
+}
+
+
+li {
+    list-style-type: none;
+}
+
+li.filtre {
+    font-weight: bold;
+}
+
+li.filtre::before {
+    font-family: 'Font Awesome 5 Free';
+}
+
+li.animaux::before {
+    content: "\f6d3";
+}
+
+li.eco::before {
+    content:"\f53a";
+}
+
+li.familial::before {
+    content:"\f1ae";
+}
+
+li.romantique::before {
+    content:"\f004";
+}
+
+nav a:link {
+    text-decoration: none;
+    color: black;
+}
+
+nav a:link.blue {
+    color: var(--charte_bleu);
+}
+
+nav a:link#nav_hébergements {
+    border-top: solid 2px var(--charte_bleu);
+}
+
 nav a:visited {
     text-decoration: none;
     color: black;
@@ -22,9 +91,120 @@ nav a.blue:visited {
     color: var(--charte_bleu);
 }
 
+nav a:hover {
+    background-color: var(--charte_gris);
+}
+
+#logo {
+    justify-self: start;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+#nav_activités {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+#nav_hébergements {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+#nav_inscrire {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+#bouton_rechercher {
+    background-color: var(--charte_bleu);
+    color: white;
+    border-radius: 0 15px 15px 0;
+    padding-left: 15px;
+    padding-right: 18px;
+}
+
+#logo_recherche {
+    background-color: var(--charte_gris);
+    border : solid 1px var(--charte_gris);
+    border-radius: 15px 0 0 15px;
+    padding: 14.8px 18px 14.8px 15px;
+}
+
+#recherche {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 50px;
+    max-width: 370px;
+    border : solid 1px var(--charte_gris);
+    border-radius: 15px;
+}
+
 .blue {
     color: var(--charte_bleu)
 }
-.blue .grey {
+
+.bold {
+    font-weight: bold;
+}
+
+.grey {
     color: var(--charte_gris);
+}
+
+.info::before {
+    content:"\f129";
+    font-family: 'Font Awesome 5 Free';
+    width: 15px;
+    height: 15px;
+    font-weight: bold;
+    font-size: 0.7em;
+    margin-right: 10px;
+    color: var(--charte_bleu);
+    background-color: white;
+    padding: 10px 14px 10px 14px;
+    border: solid 1px rgb(139, 139, 139);
+    border-radius: 50%;
+}
+
+    
+@media screen AND (min-width: 768px) {
+    header ul {
+        display: grid;
+        grid: 75px / 7fr 1fr 1fr 1fr;
+        justify-content: center;
+        align-content: center;
+        justify-items: center;
+        align-items: center;
+    }
+
+    nav a:link#nav_hébergements {
+        border-top: solid 2px var(--charte_bleu);
+        padding: 42px;
+    }
+
+    #logo {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    #nav_activités {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        padding: 42px;
+    }
+    
+    #nav_hébergements {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        padding: 42px;
+    }
+    
+    #nav_inscrire {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+        padding: 42px;
+    }
+
 }
