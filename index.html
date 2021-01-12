@@ -9,32 +9,33 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav id="nav_principal"> 
             <ul> 
                 <li id="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"/></li>
-                <li><a href="#section_hébergements" id="nav_hébergements" class="blue">Hébergements</a></li>
-                <li><a href="#section_activités" id="nav_activités">Activités</a></li>
-                <li><a href="" id="nav_inscrire" class="blue bold">S'inscrire</a></li>            
+                <li id="nav_hébergements"><a href="#section_hébergements" class="blue">Hébergements</a></li>
+                <li id="nav_activités"><a href="#section_activités">Activités</a></li>
+                <li id="nav_inscrire"><a href="" class="blue bold">S'inscrire</a></li>            
             </ul>
         </nav>
     </header>
 
-    <div>
-        <div>
+    <section id="section_recherche">
+        <section id="titre_recherche">
             <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
             <p>En plein centre ville ou en pleine nature</p>
-        </div>
+        </section>
 
         <div id="recherche">
-            <i id="logo_recherche" class="fas fa-map-marker-alt"></i>
-            <input type="search" name="lieu" id="lieu" value="Marseille, France" class="bold" />
+            <label for="lieu" id="logo_recherche"><i class="fas fa-map-marker-alt"></i></label>
+            <input type="search" name="lieu" id="lieu" placeholder="Marseille, France" class="bold" />
             <input type="submit" id="bouton_rechercher" value=Rechercher />
         </div>
     
-        <div id="filtres">
+        <section id="filtres">
             <h3>Filtres</h3>
             <ul id="liste_filtres"> 
                 <li class="filtre eco">Économique</li>
@@ -42,10 +43,10 @@
                 <li class="filtre romantique">Romantique</li>
                 <li class="filtre animaux">Animaux autorisés</li>
             </ul>
-        </div>
+        </section>
 
          <p class="info">Plus de 500 logements sont disponibles dans cette ville</p>
-    </div>
+    </section>
 
 <main>
     <section id="section_hébergements">
@@ -75,24 +76,24 @@
 </section>
 
 <footer>
-    <div>
+    <section>
         <h3>A propos</h3>
         <ul>
             <li><a href="">Fonctionnement du site</a></li>
             <li><a href="">Conditions générales de vente</a></li>
             <li><a href="">Données et confidentialité</a></li>
         </ul>
-    </div>
+    </section>
 
-    <div>
+    <section>
         <h3>Nos hébergements</h3>
         <ul>
             <li><a href="">Charte qualité</a></li>
             <li><a href="">Soumettre votre hôtel</a></li>
         </ul>
-    </div>
+    </section>
 
-    <div>
+    <section>
         <h3>Assistance</h3>
         <ul>
             <li><a href="">Centre d'aide</a></li>
