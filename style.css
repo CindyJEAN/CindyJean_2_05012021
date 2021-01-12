@@ -32,14 +32,9 @@ input {
     font-size: 1.1rem;
 }
 
-
-input {
-}
-
 input:focus {
     outline: none;
 }
-
 
 li {
     list-style-type: none;
@@ -51,6 +46,11 @@ li.filtre {
 
 li.filtre::before {
     font-family: 'Font Awesome 5 Free';
+    padding: 11px 14px 11px 14px;
+    border: solid 1px var(--charte_bleuc);
+    border-radius: 20px 20px 20px 20px;   
+    background-color: var(--charte_bleuc);
+    color: var(--charte_bleu);
 }
 
 li.animaux::before {
@@ -124,6 +124,16 @@ nav a:hover {
     padding-right: 18px;
 }
 
+#filtres {
+    display: flex;
+    align-items: center;
+}
+
+#liste_filtres {
+    display: flex;
+    justify-items: space-between;
+}
+
 #logo_recherche {
     background-color: var(--charte_gris);
     border : solid 1px var(--charte_gris);
@@ -147,6 +157,13 @@ nav a:hover {
 
 .bold {
     font-weight: bold;
+}
+
+.filtre {
+    border: solid 1px rgb(139, 139, 139);
+    padding: 10px 15px 10px 0;
+    border-radius: 20px 20px 20px 20px;
+    margin-right: 30px;
 }
 
 .grey {
