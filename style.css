@@ -29,16 +29,40 @@ div#recherche {
 }
 
 div.logement {
-    /* border: solid 2px white; */
     border-radius: 28px;
+    background-color: white;
     -webkit-box-shadow: 5px 5px 22px 5px rgba(0,0,0,0.37);
     box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.1);
     padding: 6px;
+    display: flex;
+    margin: auto 5vw auto 5vw;
+    /* align-content: space-evenly; */
+}
+
+div.logement a:link {
+    color: black;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+}
+
+div.logement_infos {
+    margin: auto auto 8px 12px;
+}
+
+div.logement p {
+    margin: 10px auto 5px auto;
+}
+
+div.pop a:link {
+    display: flex;
+    flex-direction: row;
 }
 
 h2 {
     font-weight: bold;
     font-size: 1.4rem;
+    margin: 10vw 5vw 5vw 5vw;
 }
 
 header ul {
@@ -58,6 +82,14 @@ img.photo_héberge {
     width: 100%;
     height: 120px;
     border-radius: 25px 25px 0 0;
+}
+
+img.photo_pop {
+    width: 110px;
+    height: 130px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    border-radius: 25px 0 0 25px;
 }
 
 input {
@@ -133,6 +165,7 @@ li.filtre {
 main {
     display: flex;
     flex-wrap: wrap-reverse;
+    /* margin: 5vw; */
 }
 
 nav a:link {
@@ -178,6 +211,10 @@ p.info {
     align-items: center;
 }
 
+p.texte_prix {
+    font-size: 0.9em;
+}
+
 section#filtres {
     display: flex;
     align-items: center;
@@ -185,16 +222,26 @@ section#filtres {
     flex-wrap: wrap;
 }
 
-section#section_recherche {
+section#section_activités {
     margin: 5vw;
 }
 
 section#section_hébergements {
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
 
+section#section_recherche {
+    margin: 5vw;
 }
 
 section#section_populaire {
     background-color: var(--charte_gris);
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    padding-bottom: 30px;
 }
 
 ul#liste_filtres {
@@ -221,10 +268,13 @@ ul#liste_filtres {
     font-weight: bold;
 }
 
+.fas, .fa-star {
+    font-size: 0.8em;
+}
+
 .filtre {
     border: 2px var(--border);
     padding-right: 15px;
-    /* padding-left: 60px; */
     border-radius: 30px 30px 30px 30px;
     margin-right: 12px;
     display: flex;
