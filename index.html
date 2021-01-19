@@ -16,8 +16,8 @@
         <nav id="nav_principal"> 
             <ul> 
                 <li id="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"/></li>
-                <li id="nav_hébergements"><a href="#section_hébergements" class="blue">Hébergements</a></li>
-                <li id="nav_activités"><a href="#section_activités">Activités</a></li>
+                <li id="nav_hebergements"><a href="#section_hebergements" class="blue">Hébergements</a></li>
+                <li id="nav_activites"><a href="#section_activites">Activités</a></li>
                 <li id="nav_inscrire"><a href="" class="blue bold">S'inscrire</a></li>            
             </ul>
         </nav>
@@ -34,7 +34,7 @@
         <div id="recherche">
             <label for="lieu" id="logo_recherche"><i class="fas fa-map-marker-alt"></i></label>
             <input type="search" name="lieu" id="lieu" placeholder="Marseille, France" class="bold" />
-            <input type="submit" id="bouton_rechercher" value=Rechercher />
+            <button id="bouton_rechercher"></button>
         </div>
     
         <section id="filtres">
@@ -50,120 +50,136 @@
          <p class="info">Plus de 500 logements sont disponibles dans cette ville</p>
     </section>
 
-<main>
-    <section id="section_hébergements">
-        <h2>Hébergements à Marseille</h2>
-        
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Auberge La Cannebière</p>
-                        <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                    </div>
-                </a>
-            </div>
+    <main>
+        <section id="section_hebergements">
+            <h2>Hébergements à Marseille</h2>
+            
+            <article onclick="">
+                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_heberge"/>
+                <p class="nom_logement bold">Auberge La Cannebière</p>
+                <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>
+            </article>
 
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/hotel_duport.jpg" alt="Hôtel du port" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Hôtel du port</p>
-                        <p class="texte_prix">Nuit à partir de 52€</p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i></div>
-                    </div>
-                </a>
-            </div>
+            <article onclick="">
+                <img src="images/hebergements/hotel_duport.jpg" alt="Hôtel du port" class="photo_heberge"/>
+                <p class="nom_logement bold">Hôtel du port</p>
+                <p class="texte_prix">Nuit à partir de 52€</p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                </aside>
+            </article>
 
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/hotel_lesmouettes.jpg" alt="Hôtel Les mouettes" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Hôtel Les mouettes</p>
-                        <p class="texte_prix">Nuit à partir de 76€</p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                    </div>
-                </a>
-            </div>
+            <article onclick="">
+                <img src="images/hebergements/hotel_lesmouettes.jpg" alt="Hôtel Les mouettes" class="photo_heberge"/>
+                <p class="nom_logement bold">Hôtel Les mouettes</p>
+                <p class="texte_prix">Nuit à partir de 76€</p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>
+            </article>
 
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/hotel_delamer.jpg" alt="Hôtel de la mer" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Hôtel de la mer</p>
-                        <p class="texte_prix">Nuit à partir de 46€</p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i><i class="fas fa-star grey"></i></div>
-                    </div>
-                </a>
-            </div>
+            <article onclick="">
+                <img src="images/hebergements/hotel_delamer.jpg" alt="Hôtel de la mer" class="photo_heberge"/>
+                <p class="nom_logement bold">Hôtel de la mer</p>
+                <p class="texte_prix">Nuit à partir de 46€</p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>
+            </article>
 
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/auberge_lepanier.jpg" alt="Auberge Le Panier" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Auberge Le Panier</p>
-                        <p class="texte_prix">Nuit à partir de <span class="bold">23€</span></p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                    </div>
-                </a>
-            </div>
+            <article onclick="">
+                <img src="images/hebergements/auberge_lepanier.jpg" alt="Auberge Le Panier" class="photo_heberge"/>
+                <p class="nom_logement bold">Auberge Le Panier</p>
+                <p class="texte_prix">Nuit à partir de <span class="bold">23€</span></p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>
+            </article>
 
-            <div class="logement">
-                <a href="2.html">
-                    <img src="images/hebergements/hotel_chezamina.jpg" alt="Hôtel chez Amina" class="photo_héberge"/>
-                    <div class="logement_infos">
-                        <p class="nom_logement bold">Hôtel chez Amina</p>
-                        <p class="texte_prix">Nuit à partir de 96€</p>
-                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i></div>
-                    </div>
-                </a>
-            </div>
+            <article onclick="">
+                <img src="images/hebergements/hotel_chezamina.jpg" alt="Hôtel chez Amina" class="photo_heberge"/>
+                <p class="nom_logement bold">Hôtel chez Amina</p>
+                <p class="texte_prix">Nuit à partir de 96€</p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                </aside>   
+            </article>
 
-       
+            <p><a href="">Afficher plus</a></p>
+        </section>
 
-        <p><a href="">Afficher plus</a></p>
-    </section>
+        <section id="section_populaire">
+            <h2>Les plus populaires</h2>
 
-    <section id="section_populaire">
-        <h2>Les plus populaires</h2>
+            <article class="logement pop">
+                <img src="images/hebergements/hotel_lesoleildumatin.jpg" alt="Hôtel Le soleil du matin" class="photo_pop"/>
+                <p class="nom_logement bold">Hôtel Le soleil du matin</p>
+                <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                </aside>
+            </article>
 
-        <div class="logement pop">
-            <a href="2.html">
-                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
-                <div class="logement_infos">
-                    <p class="nom_logement bold">Auberge La Cannebière</p>
-                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                </div>
-            </a>
-        </div>
+            <article class="logement pop">
+                <img src="images/hebergements/aucoeurdeleau_chambredhotes.jpg" alt="Au coeur de l'eau Chambres d'hôtes" class="photo_pop"/>
+                <p class="nom_logement bold">Au coeur de l'eau Chambres d'hôtes</p>
+                <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>            
+            </article>
 
-        <div class="logement pop">
-            <a href="2.html">
-                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
-                <div class="logement_infos">
-                    <p class="nom_logement bold">Auberge La Cannebière</p>
-                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                </div>
-            </a>
-        </div>
+            <article class="logement pop">
+                <img src="images/hebergements/hotel_toutbleuetblanc.jpg" alt="Hôtel Tout bleu et Blanc" class="photo_pop"/>
+                <p class="nom_logement bold">Hôtel Tout bleu et Blanc</p>
+                <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                <aside class="etoiles">
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star blue"></i>
+                    <i class="fas fa-star grey"></i>
+                </aside>            
+            </article>
+        </section>
+    </main>
 
-        <div class="logement pop">
-            <a href="2.html">
-                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
-                <div class="logement_infos">
-                    <p class="nom_logement bold">Auberge La Cannebière</p>
-                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
-                </div>
-            </a>
-        </div>
-    </section>
-</main>
-
-<section id="section_activités">
+<section id="section_activites">
     <h2>Activités à Marseille</h2>
 </section>
 
