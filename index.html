@@ -21,13 +21,15 @@
                 <li id="nav_inscrire"><a href="" class="blue bold">S'inscrire</a></li>            
             </ul>
         </nav>
+        <div id="nav_border">
+            <div class="portion b_blue"></div>
+            <div class="portion b_grey"></div>
+        </div>
     </header>
 
     <section id="section_recherche">
-        <section id="titre_recherche">
-            <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-            <p>En plein centre ville ou en pleine nature</p>
-        </section>
+        <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
+        <p>En plein centre ville ou en pleine nature</p>
 
         <div id="recherche">
             <label for="lieu" id="logo_recherche"><i class="fas fa-map-marker-alt"></i></label>
@@ -38,10 +40,10 @@
         <section id="filtres">
             <h3>Filtres</h3>
             <ul id="liste_filtres"> 
-                <li class="filtre eco">Économique</li>
-                <li class="filtre familial">Familial</li>
-                <li class="filtre romantique">Romantique</li>
-                <li class="filtre animaux">Animaux autorisés</li>
+                <li class="filtre"><i class="fas fa-money-bill-wave"></i><p>Économique</p></li>
+                <li class="filtre"><i class="fas fa-child"></i><p>Familial</p></li>
+                <li class="filtre"><i class="fas fa-heart"></i><p>Romantique</p></li>
+                <li class="filtre"><i class="fas fa-dog"></i><p>Animaux autorisés</p></li>
             </ul>
         </section>
 
@@ -55,9 +57,66 @@
             <div class="logement">
                 <a href="2.html">
                     <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_héberge"/>
-                    <p class="nom_logement">Auberge La Cannebière</p>
-                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star grey"></i>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Auberge La Cannebière</p>
+                        <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="logement">
+                <a href="2.html">
+                    <img src="images/hebergements/hotel_duport.jpg" alt="Hôtel du port" class="photo_héberge"/>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Hôtel du port</p>
+                        <p class="texte_prix">Nuit à partir de 52€</p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="logement">
+                <a href="2.html">
+                    <img src="images/hebergements/hotel_lesmouettes.jpg" alt="Hôtel Les mouettes" class="photo_héberge"/>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Hôtel Les mouettes</p>
+                        <p class="texte_prix">Nuit à partir de 76€</p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="logement">
+                <a href="2.html">
+                    <img src="images/hebergements/hotel_delamer.jpg" alt="Hôtel de la mer" class="photo_héberge"/>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Hôtel de la mer</p>
+                        <p class="texte_prix">Nuit à partir de 46€</p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i><i class="fas fa-star grey"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="logement">
+                <a href="2.html">
+                    <img src="images/hebergements/auberge_lepanier.jpg" alt="Auberge Le Panier" class="photo_héberge"/>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Auberge Le Panier</p>
+                        <p class="texte_prix">Nuit à partir de <span class="bold">23€</span></p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="logement">
+                <a href="2.html">
+                    <img src="images/hebergements/hotel_chezamina.jpg" alt="Hôtel chez Amina" class="photo_héberge"/>
+                    <div class="logement_infos">
+                        <p class="nom_logement bold">Hôtel chez Amina</p>
+                        <p class="texte_prix">Nuit à partir de 96€</p>
+                        <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i></div>
+                    </div>
                 </a>
             </div>
 
@@ -66,8 +125,41 @@
         <p><a href="">Afficher plus</a></p>
     </section>
 
-    <section class="section_populaire">
+    <section id="section_populaire">
+        <h2>Les plus populaires</h2>
 
+        <div class="logement pop">
+            <a href="2.html">
+                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
+                <div class="logement_infos">
+                    <p class="nom_logement bold">Auberge La Cannebière</p>
+                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="logement pop">
+            <a href="2.html">
+                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
+                <div class="logement_infos">
+                    <p class="nom_logement bold">Auberge La Cannebière</p>
+                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                </div>
+            </a>
+        </div>
+
+        <div class="logement pop">
+            <a href="2.html">
+                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_pop"/>
+                <div class="logement_infos">
+                    <p class="nom_logement bold">Auberge La Cannebière</p>
+                    <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
+                    <div class="etoiles"><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star blue"></i><i class="fas fa-star grey"></i></div>
+                </div>
+            </a>
+        </div>
     </section>
 </main>
 
@@ -99,7 +191,7 @@
             <li><a href="">Centre d'aide</a></li>
             <li><a href="">Nous contacter</a></li>
         </ul>
-    </div>
+    </section>
 </footer>
 
 </body>
