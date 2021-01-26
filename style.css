@@ -25,7 +25,6 @@ article img {
     height: 130px;
     object-fit: cover;
     object-position: 50% 50%;
-    border-radius: 25px 0 0 25px;
     border: 5px solid white;
 }
 
@@ -55,9 +54,10 @@ body {
 
 button#bouton_rechercher {
     background-color: var(--charte_bleu);
+    font-size: 1.05em;
     color: white;
     border: none;
-    border-radius: .5rem;
+    border-radius: 15px;
     display: flex;
     min-width: 3rem;
     justify-content: center;
@@ -97,10 +97,6 @@ header ul {
     row-gap: 10px;
 }
 
-img.photo_heberge {
-    border-radius: 25px 25px 0 0;
-    height: 110px;
-}
 
 input {
     border: 1px solid var(--charte_gris);
@@ -135,7 +131,7 @@ label#logo_recherche {
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
-    width: 7rem;
+    width: 5rem;
     justify-content: center;
 }
 
@@ -234,6 +230,10 @@ p {
     font-size: 1rem;
 }
 
+p.afficher {
+    font-size: 1.2rem;
+}
+
 p.info {
     display: flex;
 }
@@ -272,6 +272,22 @@ section#filtres {
     flex-wrap: wrap;
 }
 
+section#section_activites article {
+    width: 100%;  
+    border: none;
+    height: 200px;
+    grid-template-areas: 
+        "image"
+        "titre";
+    
+}
+
+section#section_activites img {
+    border: none;
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+}
+
 section#section_hebergements article {
     width: 100%;
     grid-template-areas:
@@ -279,19 +295,17 @@ section#section_hebergements article {
         "titre"
         "texte"
         "etoiles";
-    /* row-gap: 5px; */
     height: 200px;
-    /* align-items: start; */
 }
 
 section#section_hebergements aside {
-    padding-left: 1rem;
     font-size: 0.75em;
 }
 
-section#section_hebergements p {
-    padding-left: 1rem;
-} 
+section#section_hebergements img {
+    border-radius: 25px 25px 0 0;
+    height: 110px;
+}
 
 section#section_populaire {
     width: 100%;
@@ -310,6 +324,10 @@ section#section_populaire article {
     column-gap: 10px;
     justify-items: start;
     align-items: center;
+}
+
+section#section_populaire img {
+    border-radius: 25px 0 0 25px;
 }
 
 section#section_populaire h2 {
@@ -345,6 +363,9 @@ ul#liste_filtres {
     color: var(--charte_gris);
 }
 
+.leftpad {
+    padding-left: 1rem;
+}
 
 .portion {
     height: 3px;
