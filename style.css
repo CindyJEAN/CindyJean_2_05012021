@@ -86,17 +86,27 @@ h2 {
     font-size: 1.4rem;
 }
 
-header ul {
+header nav {
     display: grid;
-    grid: 50px 50px / 45vw 45vw;
+    grid: 50px 50px / 50vw 50vw;
     justify-items: center;
-    padding-left: 0;
     align-items: center;
     align-content: space-between;
-    margin: 0;
     row-gap: 10px;
+    grid-template-areas:
+        "logo inscrire"
+        "hebergements activites";
+    justify-content: center;
+    align-content: center;
+    justify-items: stretch;
+    align-items: stretch;
 }
 
+header nav a {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
 
 input {
     border: 1px solid var(--charte_gris);
@@ -170,9 +180,11 @@ li.filtre {
     display: flex;
     align-items: center;
     height: 50px;
+    font-family:"raleway";
 }
 
-li.filtre i {
+li.filtre::before {
+    font-family: 'Font Awesome 5 Free';
     display: flex;
     color: var(--charte_bleu);
     background-color: var(--charte_bleuc);
@@ -201,14 +213,6 @@ nav a:link.blue {
     color: var(--charte_bleu);
 }
 
-nav a:link#nav_hebergements {
-    border-top: solid 2px var(--charte_bleu);
-}
-
-nav#nav_principal {
-    margin: 5vw 5vw 0 5vw;
-}
-
 nav a:visited {
     text-decoration: none;
     color: black;
@@ -218,13 +222,11 @@ nav a.blue:visited {
     color: var(--charte_bleu);
 }
 
-nav a:hover {
-    background-color: var(--charte_gris);
+#nav_hebergements:hover, #nav_activites:hover {
+    /* background-color: var(--charte_gris); */
+    border-bottom: 2px solid var(--charte_bleu);
 }
 
-nav#nav_principal {
-    margin: 5vw 5vw 0 5vw;
-}
 
 p {
     font-size: 1rem;
@@ -328,6 +330,7 @@ section#section_populaire article {
 
 section#section_populaire img {
     border-radius: 25px 0 0 25px;
+    width: 130px;
 }
 
 section#section_populaire h2 {
@@ -367,11 +370,6 @@ ul#liste_filtres {
     padding-left: 1rem;
 }
 
-.portion {
-    height: 3px;
-    width: 50%;
-}
-
 
 
 @media screen AND (min-width: 768px) {
@@ -384,13 +382,11 @@ ul#liste_filtres {
         display: none;
     }
 
-    header ul {
+    header nav {
         display: grid;
         grid: 75px / 7fr 1fr 1fr 1fr;
-        justify-content: center;
-        align-content: center;
-        justify-items: center;
-        align-items: center;
+        grid-template-areas:
+            "logo hebergements activites inscrire";
         display: grid;
         margin: 0;
         row-gap: 0;
@@ -400,38 +396,42 @@ ul#liste_filtres {
         width: 250px;
     }
 
-    li#logo {
-        grid-column: 1 / 2;
-        grid-row: 1 / 2;
+    nav #logo {
+        /* grid-column: 1 / 2; */
+        /* grid-row: 1 / 2; */
+        justify-self: flex-start;
     }
 
-    li#nav_activites {
+/*      nav #nav_activites {
         grid-column: 3 / 4;
         grid-row: 1 / 2;
         padding: 42px;
-    }
+    } */
     
-    li#nav_hebergements {
+/*     nav #nav_hebergements {
         grid-column: 2 / 3;
         grid-row: 1 / 2;
         padding: 42px;
-    }
+    } */
+
     
-    li#nav_inscrire {
-        grid-column: 4 / 5;
-        grid-row: 1 / 2;
-        padding: 42px;
+    nav #nav_inscrire {
+        /* grid-column: 4 / 5; */
+        /* grid-row: 1 / 2; */
+        /* padding: 42px; */
+        /* justify-self: flex-end; */
+        /* background: red; */
+        justify-content: flex-end;
     }
 
-    nav#nav_principal {
+    nav #nav_principal {
         margin: 1vw 2vw 0 2vw;
     }
 
     nav a:link#nav_hebergements {
         border-top: solid 2px var(--charte_bleu);
-        padding: 42px;
+        /* padding: 42px; */
     }
-    
     section#section_recherche {
         margin: 2vw;
     }
@@ -439,6 +439,7 @@ ul#liste_filtres {
     ul#liste_filtres {
         margin-left: 15px;
     }
+
 
 }
 
@@ -450,3 +451,40 @@ ul#liste_filtres {
 }
 
 
+
+.etoiles {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.etoiles::before {
+    color: var(--charte_bleu);
+}
+.etoiles::after {
+    color: var(--charte_gris);
+    margin-left: -10px;
+}
+
+.quatreEtoiles::before {content: "\f005\f005\f005\f005";}
+.quatreEtoiles::after {content: "\f005";}
+
+
+
+nav img {
+    grid-area: logo;
+}
+nav a:first-of-type {
+    grid-area: hebergements;
+}
+nav a:nth-of-type(2) {
+    grid-area: activites;
+}
+nav a:last-of-type {
+    grid-area: inscrire;
+}
+
+#nav_hebergements,
+#nav_activites{
+  border-bottom: 2px solid var(--charte_gris);
+}

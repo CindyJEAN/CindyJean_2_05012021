@@ -14,17 +14,11 @@
 <body>
     <header>
         <nav id="nav_principal"> 
-            <ul> 
-                <li id="logo"><img src="images/logo/Reservia.svg" alt="Logo Reservia"/></li>
-                <li id="nav_hebergements"><a href="#section_hebergements" class="blue">Hébergements</a></li>
-                <li id="nav_activites"><a href="#section_activites">Activités</a></li>
-                <li id="nav_inscrire"><a href="" class="blue bold">S'inscrire</a></li>            
-            </ul>
+                <img src="images/logo/Reservia.svg" alt="Logo Reservia"/  id="logo">
+                <a href="#section_hebergements" id="nav_hebergements">Hébergements</a>
+                <a href="#section_activites" id="nav_activites">Activités</a>
+                <a href="" class="blue bold" id="nav_inscrire">S'inscrire</a>            
         </nav>
-        <div id="nav_border">
-            <div class="portion b_blue"></div>
-            <div class="portion b_grey"></div>
-        </div>
     </header>
 
     <section id="section_recherche">
@@ -40,10 +34,10 @@
         <section id="filtres">
             <h3>Filtres</h3>
             <ul id="liste_filtres"> 
-                <li class="filtre"><i class="fas fa-money-bill-wave"></i><p>Économique</p></li>
-                <li class="filtre"><i class="fas fa-child"></i><p>Familial</p></li>
-                <li class="filtre"><i class="fas fa-heart"></i><p>Romantique</p></li>
-                <li class="filtre"><i class="fas fa-dog"></i><p>Animaux autorisés</p></li>
+                <li class="filtre fas fa-money-bill-wave">Économique</li>
+                <li class="filtre fas fa-child">Familial</li>
+                <li class="filtre fas fa-heart">Romantique</li>
+                <li class="filtre fas fa-dog">Animaux autorisés</li>
             </ul>
         </section>
 
@@ -58,13 +52,7 @@
                 <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_heberge"/>
                 <p class="nom_logement bold leftpad">Auberge La Cannebière</p>
                 <p class="texte_prix leftpad">Nuit à partir de <span class="bold">25€</span></p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>
+                <aside class="etoiles leftpad quatreEtoiles"></aside>
             </article>
 
             <article onclick="">
