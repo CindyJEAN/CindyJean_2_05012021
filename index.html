@@ -13,11 +13,11 @@
 </head>
 <body>
     <header>
-        <nav id="nav_principal"> 
-                <img src="images/logo/Reservia.svg" alt="Logo Reservia"/  id="logo">
-                <a href="#section_hebergements" id="nav_hebergements">Hébergements</a>
-                <a href="#section_activites" id="nav_activites">Activités</a>
-                <a href="" class="blue bold" id="nav_inscrire">S'inscrire</a>            
+        <nav> 
+            <img src="images/logo/Reservia.svg" alt="Logo Reservia"/  id="logo">
+            <a href="#section_hebergements" id="nav_hebergements">Hébergements</a>
+            <a href="#section_activites" id="nav_activites">Activités</a>
+            <a href="" class="blue bold" id="nav_inscrire">S'inscrire</a>            
         </nav>
     </header>
 
@@ -49,75 +49,45 @@
             <h2>Hébergements à Marseille</h2>
             
             <article onclick="">
-                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Auberge La Cannebière</p>
+                <img src="images/hebergements/auberge_cannebiere.jpg" alt="Auberge La Cannebière"/>
+                <h3 class="nom_logement bold leftpad">Auberge La Cannebière</h3>
                 <p class="texte_prix leftpad">Nuit à partir de <span class="bold">25€</span></p>
                 <aside class="etoiles leftpad quatreEtoiles"></aside>
             </article>
 
             <article onclick="">
-                <img src="images/hebergements/hotel_duport.jpg" alt="Hôtel du port" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Hôtel du port</p>
+                <img src="images/hebergements/hotel_duport.jpg" alt="Hôtel du port"/>
+                <h3 class="nom_logement bold leftpad">Hôtel du port</h3>
                 <p class="texte_prix leftpad">Nuit à partir de 52€</p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                </aside>
+                <aside class="etoiles leftpad cinqEtoiles"></aside>
             </article>
 
             <article onclick="">
-                <img src="images/hebergements/hotel_lesmouettes.jpg" alt="Hôtel Les mouettes" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Hôtel Les mouettes</p>
+                <img src="images/hebergements/hotel_lesmouettes.jpg" alt="Hôtel Les mouettes"/>
+                <h3 class="nom_logement bold leftpad">Hôtel Les mouettes</h3>
                 <p class="texte_prix leftpad">Nuit à partir de 76€</p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>
+                <aside class="etoiles leftpad quatreEtoiles"></aside>
             </article>
 
             <article onclick="">
-                <img src="images/hebergements/hotel_delamer.jpg" alt="Hôtel de la mer" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Hôtel de la mer</p>
+                <img src="images/hebergements/hotel_delamer.jpg" alt="Hôtel de la mer"/>
+                <h3 class="nom_logement bold leftpad">Hôtel de la mer</h3>
                 <p class="texte_prix leftpad">Nuit à partir de 46€</p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>
+                <aside class="etoiles leftpad troisEtoiles"></aside>
             </article>
 
             <article onclick="">
-                <img src="images/hebergements/auberge_lepanier.jpg" alt="Auberge Le Panier" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Auberge Le Panier</p>
+                <img src="images/hebergements/auberge_lepanier.jpg" alt="Auberge Le Panier"/>
+                <h3 class="nom_logement bold leftpad">Auberge Le Panier</h3>
                 <p class="texte_prix leftpad">Nuit à partir de <span class="bold">23€</span></p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>
+                <aside class="etoiles leftpad cinqEtoiles"></aside>
             </article>
 
             <article onclick="">
-                <img src="images/hebergements/hotel_chezamina.jpg" alt="Hôtel chez Amina" class="photo_heberge"/>
-                <p class="nom_logement bold leftpad">Hôtel chez Amina</p>
+                <img src="images/hebergements/hotel_chezamina.jpg" alt="Hôtel chez Amina"/>
+                <h3 class="nom_logement bold leftpad">Hôtel chez Amina</h3>
                 <p class="texte_prix leftpad">Nuit à partir de 96€</p>
-                <aside class="etoiles leftpad">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                </aside>   
+                <aside class="etoiles leftpad cinqEtoiles"></aside>  
             </article>
 
             <p onclick="" class="afficher bold">Afficher plus</p>
@@ -125,44 +95,27 @@
 
         <section id="section_populaire">
             <h2>Les plus populaires</h2>
+            <aside class="logo_populaire"></aside>
 
             <article class="logement pop">
                 <img src="images/hebergements/hotel_lesoleildumatin.jpg" alt="Hôtel Le soleil du matin" class="photo_pop"/>
-                <p class="nom_logement bold">Hôtel Le soleil du matin</p>
+                <h3 class="nom_logement bold">Hôtel Le soleil du matin</h3>
                 <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                <aside class="etoiles">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                </aside>
+                <aside class="etoiles cinqEtoiles"></aside>
             </article>
 
             <article class="logement pop">
                 <img src="images/hebergements/aucoeurdeleau_chambredhotes.jpg" alt="Au coeur de l'eau Chambres d'hôtes" class="photo_pop"/>
-                <p class="nom_logement bold">Au coeur de l'eau Chambres d'hôtes</p>
+                <h3 class="nom_logement bold">Au coeur de l'eau Chambres d'hôtes</h3>
                 <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                <aside class="etoiles">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>            
+                <aside class="etoiles quatreEtoiles"></aside>           
             </article>
 
             <article class="logement pop">
                 <img src="images/hebergements/hotel_toutbleuetblanc.jpg" alt="Hôtel Tout bleu et Blanc" class="photo_pop"/>
-                <p class="nom_logement bold">Hôtel Tout bleu et Blanc</p>
+                <h3 class="nom_logement bold">Hôtel Tout bleu et Blanc</h3>
                 <p class="texte_prix">Nuit à partir de <span class="bold">25€</span></p>
-                <aside class="etoiles">
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star blue"></i>
-                    <i class="fas fa-star grey"></i>
-                </aside>            
+                <aside class="etoiles quatreEtoiles"></aside>            
             </article>
         </section>
     </main>
@@ -172,32 +125,32 @@
 
     <article>
         <img src="images/activites/vieuxport.jpg" alt="Vieux Port">
-        <p class="bold leftpad">Vieux Port</p>
+        <h3 class="bold leftpad">Vieux Port</h3>
     </article>
 
     <article>
         <img src="images/activites/fortdespomegues.jpg" alt="Port de Pomègues">
-        <p class="bold leftpad">Port de Pomègues</p>
+        <h3 class="bold leftpad">Port de Pomègues</h3>
     </article>
 
     <article>
         <img src="images/activites/ilesdufrioul.jpg" alt="Îles du Frioul">
-        <p class="bold leftpad">Îles du Frioul</p>
+        <h3 class="bold leftpad">Îles du Frioul</h3>
     </article>
 
     <article>
         <img src="images/activites/parcanationaldescalanques.jpg" alt="Parc National des Calanques">
-        <p class="bold leftpad">Parc National des Calanques</p>
+        <h3 class="bold leftpad">Parc National des Calanques</h3>
     </article>
 
     <article>
         <img src="images/activites/notredamedelagarde.jpg" alt="Notre-Dame-de-la-Garde">
-        <p class="bold leftpad">Notre-Dame-de-la-Garde</p>
+        <h3 class="bold leftpad">Notre-Dame-de-la-Garde</h3>
     </article>
 
     <article>
         <img src="images/activites/parclonghamp.jpg" alt="Parc Longchamp">
-        <p class="bold leftpad">Parc Longchamp</p>
+        <h3 class="bold leftpad">Parc Longchamp</h3>
     </article>
 </section>
 
@@ -205,25 +158,25 @@
     <section>
         <h3>A propos</h3>
         <ul>
-            <li><a href="">Fonctionnement du site</a></li>
-            <li><a href="">Conditions générales de vente</a></li>
-            <li><a href="">Données et confidentialité</a></li>
+            <li onclick="">Fonctionnement du site</li>
+            <li onclick="">Conditions générales de vente</li>
+            <li onclick="">Données et confidentialité</li>
         </ul>
     </section>
 
     <section>
         <h3>Nos hébergements</h3>
         <ul>
-            <li><a href="">Charte qualité</a></li>
-            <li><a href="">Soumettre votre hôtel</a></li>
+            <li onclick="">Charte qualité</li>
+            <li onclick="">Soumettre votre hôtel</li>
         </ul>
     </section>
 
     <section>
         <h3>Assistance</h3>
         <ul>
-            <li><a href="">Centre d'aide</a></li>
-            <li><a href="">Nous contacter</a></li>
+            <li onclick="">Centre d'aide</li>
+            <li onclick="">Nous contacter</li>
         </ul>
     </section>
 </footer>
