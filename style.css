@@ -6,7 +6,7 @@
 }
 
 a#nav_hebergements, a#nav_activites{
-    border-bottom: 2px solid var(--charte_gris);
+    border-bottom: 3px solid var(--charte_gris);
 }
 
 a#nav_hebergements:hover, a#nav_activites:hover {
@@ -30,6 +30,7 @@ article aside {
 article h3 {
     grid-area: titre;
     font-size: 1rem;
+    width: calc(100% - 5px);
 }
 
 article img {
@@ -56,6 +57,15 @@ article p {
 aside.etoiles {
     font-size: 0.7em;
 }
+
+
+aside.logo_populaire {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    justify-self: center;
+    align-self: center;
+}
+
 
 body {
     font-family: Raleway, sans-serif;
@@ -115,11 +125,10 @@ h2 {
 
 header nav {
     display: grid;
-    grid: 50px 50px / 50vw 50vw;
+    grid: 70px 50px / 50vw 50vw;
     justify-items: center;
     align-items: center;
     align-content: space-between;
-    row-gap: 10px;
     grid-template-areas:
         "logo inscrire"
         "hebergements activites";
@@ -262,6 +271,8 @@ nav a.blue:visited {
 
 nav img {
     grid-area: logo;
+    align-self: center;
+    justify-self: center;
 }
 
 
@@ -297,8 +308,6 @@ p.info::before {
 }
 
 section{
-    display: flex;
-    flex-direction: column;
     width: 90vw;
     margin: auto;
 }
@@ -307,6 +316,10 @@ section#filtres {
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
+}
+
+section#section_activites {
+    display: grid;
 }
 
 section#section_activites article {
@@ -322,6 +335,18 @@ section#section_activites img {
     border: none;
     width: 100%;
     border-radius: 25px 25px 0 0;
+}
+
+section#section_hebergements {
+    display: grid;
+    grid-template-areas:
+        "titre"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article"
+        "article";
 }
 
 section#section_hebergements article {
@@ -346,13 +371,12 @@ section#section_hebergements img {
 section#section_populaire {
     width: 100%;
     background-color: var(--charte_gris);
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 30px;
+    display: grid;
 }
 
 section#section_populaire article {
     width: 90%;
+    display: grid;
     grid-template-areas:
         "image titre"
         "image texte"
@@ -360,6 +384,7 @@ section#section_populaire article {
     column-gap: 10px;
     justify-items: start;
     align-items: center;
+    grid-column: 1 / span 2;
 }
 
 section#section_populaire img {
@@ -369,6 +394,8 @@ section#section_populaire img {
 
 section#section_populaire h2 {
     padding-left: 5%;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
 }
 
 ul {
@@ -425,15 +452,6 @@ ul#liste_filtres {
     font-weight: bold;
     font-size: 1.5rem;
     content:"\f201";
-}
-
-section#section_populaire h2::after {
-    font-family: 'Font Awesome 5 Free';
-    font-weight: bold;
-    font-size: 1.5rem;
-    content:"\f201";
-    display: inline-flex;
-    align-self: flex-end;
 }
 
 .cinqEtoiles::before {
@@ -513,5 +531,6 @@ section#section_populaire h2::after {
         padding-left: 25px;
     }
 }
+
 
 
