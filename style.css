@@ -106,6 +106,8 @@ div#recherche {
 footer {
     background-color: var(--charte_gris);
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 footer h3 {
@@ -240,7 +242,6 @@ main {
     flex-wrap: wrap-reverse;
 }
 
-
 nav a:first-of-type {
     grid-area: hebergements;
 }
@@ -308,7 +309,7 @@ p.info::before {
 }
 
 section{
-    width: 90vw;
+    width: 90%;
     margin: auto;
 }
 
@@ -316,6 +317,13 @@ section#filtres {
     display: flex;
     align-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 0;
+    width: 100%;
+}
+
+section#filtres h3 {
+    margin-right: 30px;
 }
 
 section#section_activites {
@@ -334,6 +342,7 @@ section#section_activites article {
 section#section_activites img {
     border: none;
     width: 100%;
+    /* height: 100%; */
     border-radius: 25px 25px 0 0;
 }
 
@@ -347,6 +356,7 @@ section#section_hebergements {
         "article"
         "article"
         "article";
+    row-gap: 15px;
 }
 
 section#section_hebergements article {
@@ -372,6 +382,8 @@ section#section_populaire {
     width: 100%;
     background-color: var(--charte_gris);
     display: grid;
+    margin-top: 0;
+    row-gap: 15px;
 }
 
 section#section_populaire article {
@@ -475,9 +487,17 @@ ul#liste_filtres {
 }
 
 
-@media screen AND (min-width: 768px) {
+@media screen and (min-width: 768px) {
+    a#nav_hebergements, a#nav_activites {
+        border-bottom: 0;
+    }
+  
+    a#nav_hebergements:hover, a#nav_activites:hover {
+        border-top: solid 2px var(--charte_bleu);
+        border-bottom: 0;
+    }  
     button#bouton_rechercher::before{
-        content:"rechercher";
+        content: "Rechercher";
         font-family: 'Raleway';
     }
     
@@ -487,16 +507,35 @@ ul#liste_filtres {
 
     header nav {
         display: grid;
-        grid: 75px / 7fr 1fr 1fr 1fr;
+        grid: 75px / 400px 1fr 1fr 1fr;
         grid-template-areas:
             "logo hebergements activites inscrire";
         display: grid;
         margin: 0;
         row-gap: 0;
     }
-
+    
     input#lieu {
         width: 250px;
+    }
+
+    main {
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: row;
+        align-items: start;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+
+    main article {
+        max-width: 80%;
+    }
+
+    main section {
+        background-color: var(--charte_gris);
+        border-radius: 25px;
+        margin: 0;
     }
 
     nav #logo {
@@ -504,22 +543,108 @@ ul#liste_filtres {
     }
     
     nav #nav_inscrire {
-        justify-content: flex-end;
+        /* justify-content: flex-end; */
     }
 
     nav #nav_principal {
-        margin: 1vw 2vw 0 2vw;
+        margin: auto;    
     }
 
-    nav a:link#nav_hebergements {
-        border-top: solid 2px var(--charte_bleu);
-    }
-    section#section_recherche {
-        margin: 2vw;
+    section#section_activites {
+        grid-template-areas:
+            "titre titre"
+            "a1 a2"
+            "a1 a3"
+            "a4 a5"
+            "a4 a6";
+        column-gap: 25px;
+        row-gap: 30px;
+        grid-template-rows: 70px 250px 250px 250px 250px;
     }
 
-    ul#liste_filtres {
-        margin-left: 15px;
+    section#section_hebergements {
+        row-gap: 30px;
+    }
+
+    section#section_hebergements article { 
+        height: 100%;
+        width: 250px;
+    }
+
+    section#section_activites img {
+        height: calc(100% - 50px);
+    }
+
+    section#section_activites article:nth-of-type(1) {
+        grid-area: a1;
+    }
+
+    section#section_activites article:nth-of-type(2) {
+        grid-area: a2;
+    }
+
+    section#section_activites article:nth-of-type(3) {
+        grid-area: a3;
+    }
+
+    section#section_activites article:nth-of-type(4) {
+        grid-area: a4;
+    }
+
+    section#section_activites article:nth-of-type(5) {
+        grid-area: a5;
+    }
+
+    section#section_activites article:nth-of-type(6) {
+        grid-area: a6;
+    }
+
+    section#section_activites img:nth-of-type(1) {
+        height: 200px;
+    }
+
+    section#section_activites img:nth-of-type(2) {
+        height: 180px;
+    }
+
+    section#section_activites img:nth-of-type(3) {
+        height: 100px;
+    }
+
+    section#section_activites img:nth-of-type(4) {
+        height: 200px;
+    }
+
+    section#section_activites img:nth-of-type(5) {
+        height: 180px;
+    }
+    
+    section#section_activites img:nth-of-type(6) {
+        height: 180px;
+    }
+
+
+    section#section_activites h2 {
+        grid-area: titre;
+    }
+    
+    section#section_activites h3 {
+        display: block;
+        height: 50px;
+    }
+
+    section#section_hebergements {
+       width: 40%;
+    }
+
+
+    section#section_populaire {
+        width: 40%;
+    }
+
+
+    main h2, main p.afficher {
+        padding-left: 5%;
     }
 
 
@@ -527,9 +652,86 @@ ul#liste_filtres {
 
 @media screen AND (min-width: 992px) {
 
-    #liste_filtres {
-        padding-left: 25px;
+    main section article {
+        margin: 0;
     }
+
+    section#section_activites {
+        grid-template-areas:
+            "titre titre titre titre"
+            "a1 a2 a4 a5"
+            "a1 a2 a4 ."
+            "a1 . a4 a6"
+            "a1 a3 a4 a6";
+        column-gap: 25px;
+        row-gap: 0;
+        grid-template-rows: 70px 200px 50px 50px 200px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    section#section_hebergements {
+       width: 60%;
+       grid-template-areas:
+          "titre titre titre"
+          "h1 h2 h3"
+          "h4 h5 h6"
+          "soustitre soustitre soustitre";
+       /* grid-template-columns: 1fr 1fr 1fr; */
+    }
+
+    section#section_hebergements h2 {
+        grid-area: titre;
+    }
+
+    section#section_hebergements p.afficher {
+        grid-area: soustitre;
+    }
+
+    section#section_hebergements article:nth-of-type(1) {
+        grid-area: h1;
+    }
+    
+    section#section_hebergements article:nth-of-type(2) {
+        grid-area: h2;
+    }
+
+    section#section_hebergements article:nth-of-type(3) {
+        grid-area: h3;
+    }
+
+    section#section_hebergements article:nth-of-type(4) {
+        grid-area: h4;
+    }
+
+    section#section_hebergements article:nth-of-type(5) {
+        grid-area: h5;
+    }
+
+    section#section_hebergements article:nth-of-type(6) {
+        grid-area: h6;
+    }
+
+
+    section#section_populaire {
+        width: 30%;
+    }
+
+
+    section#section_activites img {
+        height: 100px;
+    }
+
+    section#section_populaire article { 
+        height: 100%;
+        width: 300px;
+    }
+
+    footer {
+        flex-direction: initial;
+    }
+
+
+
 }
 
 
