@@ -13,6 +13,12 @@ a#nav_hebergements:hover, a#nav_activites:hover {
     border-bottom: 2px solid var(--charte_bleu);
 }
 
+a#nav_inscrire {
+    justify-self: flex-end;
+    padding-right: 1rem;
+}
+
+
 article {
     background: white;
     display: grid;
@@ -46,6 +52,12 @@ article p, article h3 {
     margin: 0;
 }
 
+#section_activites article h3 {
+    display:flex;
+    align-items: center;
+    height: 2.5rem;
+}
+
 article p {
     grid-area: texte;
     align-self: flex-start;
@@ -72,6 +84,8 @@ body {
     font-size: 1rem;
     font-weight: 500;
     margin: 0;
+    max-width: 1400px;
+    margin: auto;
 }
 
 button#bouton_rechercher {
@@ -105,9 +119,11 @@ div#recherche {
 
 footer {
     background-color: var(--charte_gris);
-    margin: auto;
+    /* margin: auto; */
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    /* justify-content: flex-start; */
 }
 
 footer h3 {
@@ -273,7 +289,8 @@ nav a.blue:visited {
 nav img {
     grid-area: logo;
     align-self: center;
-    justify-self: center;
+    justify-self: flex-start;
+    padding-left: 1rem;
 }
 
 
@@ -334,28 +351,25 @@ section#section_activites article {
     width: 100%;
     border: none;
     height: 180px;
-    grid-template-areas:
-        "image"
-        "titre";
+    display: block;
 }
 
 section#section_activites img {
     border: none;
     width: 100%;
-    /* height: 100%; */
     border-radius: 25px 25px 0 0;
 }
 
 section#section_hebergements {
-    display: grid;
-    grid-template-areas:
+/*     display: grid; */
+/*     grid-template-areas:
         "titre"
         "article"
         "article"
         "article"
         "article"
         "article"
-        "article";
+        "article"; */
     row-gap: 15px;
 }
 
@@ -381,7 +395,7 @@ section#section_hebergements img {
 section#section_populaire {
     width: 100%;
     background-color: var(--charte_gris);
-    display: grid;
+    /* display: grid; */
     margin-top: 0;
     row-gap: 15px;
 }
@@ -406,8 +420,11 @@ section#section_populaire img {
 
 section#section_populaire h2 {
     padding-left: 5%;
-    grid-row: 1 / 2;
-    grid-column: 1 / 2;
+    /* grid-row: 1 / 2; */
+    /* grid-column: 1 / 2; */
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
 }
 
 ul {
@@ -490,6 +507,7 @@ ul#liste_filtres {
 @media screen and (min-width: 768px) {
     a#nav_hebergements, a#nav_activites {
         border-bottom: 0;
+        border-top: 2px solid transparent;
     }
   
     a#nav_hebergements:hover, a#nav_activites:hover {
@@ -506,13 +524,15 @@ ul#liste_filtres {
     }
 
     header nav {
-        display: grid;
-        grid: 75px / 400px 1fr 1fr 1fr;
+/*         display: grid; */
+        grid-template-columns: 25rem calc(100% - 47rem) 8rem 8rem 6rem;
         grid-template-areas:
-            "logo hebergements activites inscrire";
+            "logo . hebergements activites inscrire";
         display: grid;
         margin: 0;
         row-gap: 0;
+        width: 100%;
+        grid-template-rows: 75px;
     }
     
     input#lieu {
@@ -525,7 +545,7 @@ ul#liste_filtres {
         flex-direction: row;
         align-items: start;
         margin: auto;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 
     main article {
@@ -535,11 +555,18 @@ ul#liste_filtres {
     main section {
         background-color: var(--charte_gris);
         border-radius: 25px;
-        margin: 0;
+/*         margin: 0; */
+              display: flex;
+       flex-wrap: wrap;
     }
 
+        main section article {
+        margin: auto;
+    }
+
+
     nav #logo {
-        justify-self: flex-start;
+        /* justify-self: flex-start; */
     }
     
     nav #nav_inscrire {
@@ -566,15 +593,18 @@ ul#liste_filtres {
         row-gap: 30px;
     }
 
-    section#section_hebergements article { 
+    section#section_hebergements article {
         height: 100%;
         width: 250px;
+        margin: auto;
     }
 
     section#section_activites img {
         height: calc(100% - 50px);
     }
-
+    section#section_activites article {
+        height: 100%;        
+    }
     section#section_activites article:nth-of-type(1) {
         grid-area: a1;
     }
@@ -599,38 +629,9 @@ ul#liste_filtres {
         grid-area: a6;
     }
 
-    section#section_activites img:nth-of-type(1) {
-        height: 200px;
-    }
-
-    section#section_activites img:nth-of-type(2) {
-        height: 180px;
-    }
-
-    section#section_activites img:nth-of-type(3) {
-        height: 100px;
-    }
-
-    section#section_activites img:nth-of-type(4) {
-        height: 200px;
-    }
-
-    section#section_activites img:nth-of-type(5) {
-        height: 180px;
-    }
-    
-    section#section_activites img:nth-of-type(6) {
-        height: 180px;
-    }
-
 
     section#section_activites h2 {
         grid-area: titre;
-    }
-    
-    section#section_activites h3 {
-        display: block;
-        height: 50px;
     }
 
     section#section_hebergements {
@@ -640,6 +641,7 @@ ul#liste_filtres {
 
     section#section_populaire {
         width: 40%;
+        padding-bottom: 2rem;
     }
 
 
@@ -650,11 +652,9 @@ ul#liste_filtres {
 
 }
 
-@media screen AND (min-width: 992px) {
+@media screen and (min-width: 992px) {
 
-    main section article {
-        margin: 0;
-    }
+
 
     section#section_activites {
         grid-template-areas:
@@ -671,54 +671,17 @@ ul#liste_filtres {
 
     section#section_hebergements {
        width: 60%;
-       grid-template-areas:
-          "titre titre titre"
-          "h1 h2 h3"
-          "h4 h5 h6"
-          "soustitre soustitre soustitre";
-       /* grid-template-columns: 1fr 1fr 1fr; */
+
     }
 
-    section#section_hebergements h2 {
-        grid-area: titre;
-    }
-
-    section#section_hebergements p.afficher {
-        grid-area: soustitre;
-    }
-
-    section#section_hebergements article:nth-of-type(1) {
-        grid-area: h1;
-    }
-    
-    section#section_hebergements article:nth-of-type(2) {
-        grid-area: h2;
-    }
-
-    section#section_hebergements article:nth-of-type(3) {
-        grid-area: h3;
-    }
-
-    section#section_hebergements article:nth-of-type(4) {
-        grid-area: h4;
-    }
-
-    section#section_hebergements article:nth-of-type(5) {
-        grid-area: h5;
-    }
-
-    section#section_hebergements article:nth-of-type(6) {
-        grid-area: h6;
+    section#section_hebergements h2, section#section_hebergements > P {
+        /* grid-area: titre; */
+        width: 100%;
     }
 
 
     section#section_populaire {
         width: 30%;
-    }
-
-
-    section#section_activites img {
-        height: 100px;
     }
 
     section#section_populaire article { 
@@ -727,10 +690,12 @@ ul#liste_filtres {
     }
 
     footer {
-        flex-direction: initial;
+        /* flex-direction: initial; */
     }
 
-
+footer section {
+    max-width: 400px;
+}
 
 }
 
