@@ -10,7 +10,7 @@ a#nav_hebergements, a#nav_activites{
 }
 
 a#nav_hebergements:hover, a#nav_activites:hover {
-    border-bottom: 2px solid var(--charte_bleu);
+    border-bottom: 3px solid var(--charte_bleu);
 }
 
 a#nav_inscrire {
@@ -336,7 +336,7 @@ section#filtres h3 {
 
 section#section_activites {
     display: grid;
-    padding: 2rem 0;
+    padding: 0.75rem 0 1.25rem 0;
 }
 
 section#section_activites article {
@@ -354,7 +354,7 @@ section#section_activites img {
 
 section#section_hebergements {
     row-gap: 15px;
-    padding: 1rem 0;
+    padding: 0.75rem 0 1.25rem 0;
 }
 
 section#section_hebergements article {
@@ -406,12 +406,12 @@ section#section_populaire h2 {
     padding-left: 5%;
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 90%;
     /* margin: 0; */
 }
 
 section#section_recherche {
-    padding: 1rem 0;
+    padding: 0.75rem 0 1.25rem 0;
 }
 
 ul {
@@ -463,12 +463,11 @@ ul#liste_filtres {
     padding-left: 1rem;
 }
 
-.logo_populaire::before {
+.logo_populaire::after {
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
     font-size: 1.5rem;
     content:"\f201";
-    /* margin: auto; */
 }
 
 .cinqEtoiles::before {
