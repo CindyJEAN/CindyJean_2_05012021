@@ -24,6 +24,7 @@ article {
     display: grid;
     border-radius: 25px;
     background-color: white;
+    max-width: 382px;
     -webkit-box-shadow: 5px 5px 22px 5px rgba(0,0,0,0.37);
     box-shadow: 2px 2px 10px 2px rgba(0,0,0,0.1);
     margin: 0 auto 1rem auto;
@@ -84,7 +85,7 @@ button#bouton_rechercher {
     border: none;
     border-radius: 15px;
     display: flex;
-    min-width: 3rem;
+    width: 4.5rem;
     justify-content: center;
     align-items: center;
 }
@@ -107,17 +108,28 @@ div#recherche {
     margin: 2rem auto;
 }
 
-margin {}
-
 footer {
     background-color: var(--charte_gris);
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem 1rem;
+    padding: 2rem 5%;
+    justify-content: flex-start;
+}
+
+footer section {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    /* justify-content: flex-start; */
+    /* padding: 0; */
+    /* margin: 1rem 0; */
 }
 
 footer h3 {
     font-size: 1.1rem;
+    width: 100%;
 }
 
 footer ul {
@@ -186,7 +198,7 @@ label#logo_recherche {
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
-    width: 5rem;
+    width: 4.5rem;
     justify-content: center;
 }
 
@@ -226,6 +238,11 @@ li.filtre {
     align-items: center;
     height: 50px;
     font-family:"raleway";
+}
+
+li.filtre:hover {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 6px 0 rgba(0,0,0,0.1);
 }
 
 li.filtre::before {
@@ -386,13 +403,14 @@ section#section_populaire {
 
 section#section_populaire article {
     width: 90%;
+    /* max-width: 382px; */
     display: grid;
     grid-template-areas:
         "image titre"
         "image texte"
         "image etoiles";
     column-gap: 10px;
-    justify-items: start;
+    justify-content: start;
     align-items: center;
     grid-column: 1 / span 2;
 }
@@ -501,13 +519,28 @@ ul#liste_filtres {
         border-top: solid 2px var(--charte_bleu);
         border-bottom: 0;
     }  
+
+    button#bouton_rechercher {
+        border-radius: 0 15px 15px 0;
+        width: 8rem;
+    }
+
     button#bouton_rechercher::before{
         content: "Rechercher";
         font-family: 'Raleway';
     }
-    
+
     div#nav_border {
         display: none;
+    }
+
+    footer {
+    justify-content: space-between;
+    padding: 0 5%;
+    }
+
+    footer section {
+        margin: 1rem 0;
     }
 
     header nav {
@@ -522,8 +555,12 @@ ul#liste_filtres {
     }
     
     input#lieu {
-        width: 250px;
+        width: 240px;
     }
+
+    label#logo_recherche {
+    width: 3rem;
+}
 
     main {
         display: flex;
@@ -532,6 +569,7 @@ ul#liste_filtres {
         align-items: start;
         margin: auto;
         justify-content: space-between;
+        width: 90%;
     }
 
     main article {
@@ -541,8 +579,9 @@ ul#liste_filtres {
     main section {
         background-color: var(--charte_gris);
         border-radius: 25px;
-              display: flex;
-       flex-wrap: wrap;
+        display: flex;
+        flex-wrap: wrap;
+        /* margin: 0; */
     }
 
         main section article {
@@ -566,13 +605,13 @@ ul#liste_filtres {
     }
 
     section#section_hebergements {
-        row-gap: 30px;
+        /* row-gap: 30px; */
     }
 
     section#section_hebergements article {
-        height: 100%;
+        height: 200px;
         width: 250px;
-        margin: auto;
+        /* margin: 0; */
     }
 
     section#section_activites img {
@@ -610,13 +649,18 @@ ul#liste_filtres {
     }
 
     section#section_hebergements {
-       width: 40%;
+       width: 45%;
+       justify-content: space-evenly;
     }
 
 
     section#section_populaire {
-        width: 40%;
+        width: 45%;
         padding-bottom: 2rem;
+    }
+
+    section#section_populaire article{
+        width: 140px;
     }
 
     main h2, main p.afficher {
@@ -631,6 +675,7 @@ ul#liste_filtres {
 
 
     section#section_activites {
+        /* width: 90%; */
         grid-template-areas:
             "titre titre titre titre"
             "a1 a2 a4 a5"
@@ -645,7 +690,9 @@ ul#liste_filtres {
 
     section#section_hebergements {
        width: 60%;
-
+       justify-content: space-evenly;
+       align-content: space-evenly;
+       margin: auto;
     }
 
     section#section_hebergements h2, section#section_hebergements > P {
@@ -661,9 +708,7 @@ ul#liste_filtres {
         width: 300px;
     }
 
-footer section {
-    max-width: 400px;
-}
+footer section {/* width: 100%; */}
 
 }
 
