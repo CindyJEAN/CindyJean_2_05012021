@@ -85,7 +85,7 @@ button#bouton_rechercher {
     border: none;
     border-radius: 15px;
     display: flex;
-    width: 4.5rem;
+    width: 50px;
     justify-content: center;
     align-items: center;
 }
@@ -185,7 +185,7 @@ input#bouton_rechercher {
 }
 
 input#lieu {
-    width: 100%;
+    width: calc(100% - 100px);
 }
 
 input#lieu::placeholder {
@@ -198,7 +198,7 @@ label#logo_recherche {
     border-radius: 15px 0 0 15px;
     display: flex;
     align-items: center;
-    width: 4.5rem;
+    width: 50px;
     justify-content: center;
 }
 
@@ -371,7 +371,7 @@ section#section_activites img {
 
 section#section_hebergements {
     row-gap: 15px;
-    padding: 0.75rem 0 1.25rem 0;
+    padding: 1rem 0;
 }
 
 section#section_hebergements article {
@@ -520,6 +520,11 @@ ul#liste_filtres {
         border-bottom: 0;
     }  
 
+    a#nav_inscrire {
+        justify-self: center;
+        padding-right: 0;
+    }
+
     button#bouton_rechercher {
         border-radius: 0 15px 15px 0;
         width: 8rem;
@@ -535,32 +540,36 @@ ul#liste_filtres {
     }
 
     footer {
-    justify-content: space-between;
-    padding: 0 5%;
+        justify-content: space-between;
+        padding: 0 5%;
     }
 
     footer section {
         margin: 1rem 0;
     }
-
+        
     header nav {
-        grid-template-columns: 25rem calc(100% - 47rem) 8rem 8rem 6rem;
+        grid-template-columns: 1fr repeat(3, 130px);
         grid-template-areas:
-            "logo . hebergements activites inscrire";
+            "logo hebergements activites inscrire";
         display: grid;
-        margin: 0;
+        margin: auto;
         row-gap: 0;
-        width: 100%;
+        width: 90%;
         grid-template-rows: 75px;
+    }
+    
+    header img {
+        padding-left: 0;
+    }
+    
+    section#section_populaire h2 {
+        padding-left: 0;
     }
     
     input#lieu {
         width: 240px;
     }
-
-    label#logo_recherche {
-    width: 3rem;
-}
 
     main {
         display: flex;
@@ -573,7 +582,8 @@ ul#liste_filtres {
     }
 
     main article {
-        max-width: 80%;
+        width: 90%;
+        margin: auto 1rem;
     }
 
     main section {
@@ -581,11 +591,13 @@ ul#liste_filtres {
         border-radius: 25px;
         display: flex;
         flex-wrap: wrap;
-        /* margin: 0; */
+        margin: 0;
+        padding: 1rem 0;
     }
 
-        main section article {
-        margin: auto;
+    main section h2, p.afficher {
+        margin: 0;
+        padding: 0;
     }
 
     nav #nav_principal {
@@ -604,14 +616,11 @@ ul#liste_filtres {
         grid-template-rows: 70px 250px 250px 250px 250px;
     }
 
-    section#section_hebergements {
-        /* row-gap: 30px; */
-    }
-
     section#section_hebergements article {
         height: 200px;
-        width: 250px;
-        /* margin: 0; */
+        width: 100%;
+        max-width: 230px;
+        margin: auto 1rem;
     }
 
     section#section_activites img {
@@ -650,18 +659,15 @@ ul#liste_filtres {
 
     section#section_hebergements {
        width: 45%;
-       justify-content: space-evenly;
+       /* justify-content: space-evenly; */
     }
 
 
     section#section_populaire {
-        width: 45%;
+        width: 50%;
         padding-bottom: 2rem;
     }
 
-    section#section_populaire article{
-        width: 140px;
-    }
 
     main h2, main p.afficher {
         padding-left: 5%;
@@ -689,10 +695,10 @@ ul#liste_filtres {
     }
 
     section#section_hebergements {
-       width: 60%;
+       width: 63%;
        justify-content: space-evenly;
        align-content: space-evenly;
-       margin: auto;
+       /* margin: auto; */
     }
 
     section#section_hebergements h2, section#section_hebergements > P {
@@ -700,7 +706,7 @@ ul#liste_filtres {
     }
 
     section#section_populaire {
-        width: 30%;
+        width: 35%;
     }
 
     section#section_populaire article { 
