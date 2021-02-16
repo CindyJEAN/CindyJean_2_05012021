@@ -67,6 +67,7 @@ article p {
 
 aside.etoiles {
     font-size: 0.7em;
+    /* padding-bottom: 5px; */
 }
 
 body {
@@ -88,6 +89,7 @@ button#bouton_rechercher {
     width: 50px;
     justify-content: center;
     align-items: center;
+    margin-left: -16px;
 }
 
 button#bouton_rechercher::before{
@@ -185,7 +187,7 @@ input#bouton_rechercher {
 }
 
 input#lieu {
-    width: calc(100% - 100px);
+    width: calc(100% - 84px);
 }
 
 input#lieu::placeholder {
@@ -309,6 +311,7 @@ p {
 
 p.afficher {
     font-size: 1.2rem;
+    margin: 1.2rem 0 0 0;
 }
 
 p.info {
@@ -381,16 +384,19 @@ section#section_hebergements article {
         "titre"
         "texte"
         "etoiles";
-    height: 200px;
+    height: 190px;
+    align-items: center;
 }
 
 section#section_hebergements aside {
     font-size: 0.75em;
+    padding-bottom: 10px;
 }
 
 section#section_hebergements img {
     border-radius: 25px 25px 0 0;
-    height: 110px;
+    height: 100px;
+    align-self:  flex-start;
 }
 
 section#section_populaire {
@@ -400,6 +406,7 @@ section#section_populaire {
     row-gap: 15px;
     padding: 1rem 0;
 }
+
 
 section#section_populaire article {
     width: 90%;
@@ -484,7 +491,7 @@ ul#liste_filtres {
 .logo_populaire::after {
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     content:"\f201";
 }
 
@@ -577,14 +584,11 @@ ul#liste_filtres {
         flex-direction: row;
         align-items: start;
         margin: auto;
-        justify-content: space-between;
+        /* justify-content: space-between; */
         width: 90%;
+        column-gap: 40px;
     }
 
-    main article {
-        width: 90%;
-        margin: auto 1rem;
-    }
 
     main section {
         background-color: var(--charte_gris);
@@ -592,10 +596,10 @@ ul#liste_filtres {
         display: flex;
         flex-wrap: wrap;
         margin: 0;
-        padding: 1rem 0;
+        /* padding: 1rem; */
     }
 
-    main section h2, p.afficher {
+    main section h2 {
         margin: 0;
         padding: 0;
     }
@@ -617,10 +621,22 @@ ul#liste_filtres {
     }
 
     section#section_hebergements article {
-        height: 200px;
+        /* height: 200px; */
         width: 100%;
-        max-width: 230px;
-        margin: auto 1rem;
+        /* max-width: 230px; */
+        margin: auto 0;
+    }
+
+    
+    section#section_populaire article {
+        width: 100%;
+        margin: auto 0;
+        min-width: 250px;
+    }
+
+
+    section#section_populaire h2 {
+        width: 100%;
     }
 
     section#section_activites img {
@@ -658,19 +674,15 @@ ul#liste_filtres {
     }
 
     section#section_hebergements {
-       width: 45%;
+       width: calc(60% - 20px);
+       padding: 2rem;
        /* justify-content: space-evenly; */
     }
 
 
     section#section_populaire {
-        width: 50%;
-        padding-bottom: 2rem;
-    }
-
-
-    main h2, main p.afficher {
-        padding-left: 5%;
+        width: calc(40% - 20px);
+        padding: 2rem;
     }
 
 
@@ -694,11 +706,22 @@ ul#liste_filtres {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
+
     section#section_hebergements {
-       width: 63%;
-       justify-content: space-evenly;
-       align-content: space-evenly;
-       /* margin: auto; */
+       width: calc(70% - 20px);
+       padding: 2rem;
+    }
+
+
+    section#section_populaire {
+        width: calc(30% - 20px);
+        padding: 2rem;
+    }
+    
+    section#section_hebergements {
+        justify-content: space-between;       
+        align-content: space-evenly;
+       
     }
 
     section#section_hebergements h2, section#section_hebergements > P {
@@ -706,17 +729,33 @@ ul#liste_filtres {
     }
 
     section#section_populaire {
-        width: 35%;
+        
     }
 
     section#section_populaire article { 
         height: 100%;
-        width: 300px;
     }
+
+    section#section_hebergements article {
+        /* height: 100%; */
+        max-width: 250px;
+        margin-right: 5px;
+    }
+
+
+   
 
 footer section {/* width: 100%; */}
 
 }
 
 
+@media screen AND (min-width: 1024px) {
+
+    body {
+        max-width: 100vw;
+    }
+
+   
+}
 
