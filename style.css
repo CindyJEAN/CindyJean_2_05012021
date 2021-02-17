@@ -18,7 +18,6 @@ a#nav_inscrire {
     padding-right: 1rem;
 }
 
-
 article {
     background: white;
     display: grid;
@@ -53,12 +52,6 @@ article p, article h3 {
     margin: 0;
 }
 
-#section_activites article h3 {
-    display:flex;
-    align-items: center;
-    height: 2.5rem;
-}
-
 article p {
     grid-area: texte;
     align-self: flex-start;
@@ -67,7 +60,6 @@ article p {
 
 aside.etoiles {
     font-size: 0.7em;
-    /* padding-bottom: 5px; */
 }
 
 body {
@@ -89,18 +81,13 @@ button#bouton_rechercher {
     width: 50px;
     justify-content: center;
     align-items: center;
-    margin-left: -16px;
+    margin-left: -20px;
 }
 
 button#bouton_rechercher::before{
     content:"\f002";
     font-family: 'Font Awesome 5 Free';
     font-weight: bold;
-}
-
-div#nav_border {
-    margin: 0;
-    display: flex;
 }
 
 div#recherche {
@@ -114,7 +101,7 @@ footer {
     background-color: var(--charte_gris);
     display: flex;
     flex-wrap: wrap;
-    padding: 2rem 5%;
+    padding: 2rem;
     justify-content: flex-start;
 }
 
@@ -124,9 +111,7 @@ footer section {
     flex-wrap: wrap;
     align-content: flex-start;
     align-items: flex-start;
-    /* justify-content: flex-start; */
-    /* padding: 0; */
-    /* margin: 1rem 0; */
+    margin: 1rem 0;
 }
 
 footer h3 {
@@ -145,7 +130,7 @@ h2 {
     font-size: 1.4rem;
 }
 
-header nav {
+nav {
     display: grid;
     grid: 70px 50px / 50vw 50vw;
     justify-items: center;
@@ -161,7 +146,7 @@ header nav {
     margin-top: 1rem;
 }
 
-header nav a {
+nav a {
         align-items: center;
         display: flex;
         justify-content: center;
@@ -187,7 +172,7 @@ input#bouton_rechercher {
 }
 
 input#lieu {
-    width: calc(100% - 84px);
+    width: calc(100% - 80px);
 }
 
 input#lieu::placeholder {
@@ -255,12 +240,13 @@ li.filtre::before {
     margin-right: 10px;
     align-items: center;
     justify-content: center;
-    width: 3rem;
+    width: 50px;
     border: solid 2px var(--charte_bleuc);
     border-radius: 30px 30px 30px 30px;
-    height: 3rem;
+    height: 50px;
     font-size: 1.1rem;
     z-index: 1;
+    margin-left: -2px;
 }
 
 main {
@@ -302,8 +288,6 @@ nav img {
     justify-self: flex-start;
     padding-left: 1rem;
 }
-
-
 
 p {
     font-size: 1rem;
@@ -366,6 +350,12 @@ section#section_activites article {
     display: block;
 }
 
+#section_activites article h3 {
+    display: flex;
+    align-items: center;
+    height: 2.5rem;
+}
+
 section#section_activites img {
     border: none;
     width: 100%;
@@ -407,10 +397,8 @@ section#section_populaire {
     padding: 1rem 0;
 }
 
-
 section#section_populaire article {
     width: 90%;
-    /* max-width: 382px; */
     display: grid;
     grid-template-areas:
         "image titre"
@@ -432,11 +420,10 @@ section#section_populaire h2 {
     display: flex;
     justify-content: space-between;
     width: 90%;
-    /* margin: 0; */
 }
 
 section#section_recherche {
-    padding: 0.75rem 0 1.25rem 0;
+    margin: 1.75rem auto 1.25rem auto;
 }
 
 ul {
@@ -446,7 +433,6 @@ ul {
 ul#liste_filtres {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 0;
     row-gap: 12px;
 }
 
@@ -475,6 +461,7 @@ ul#liste_filtres {
 .etoiles::before {
     color: var(--charte_bleu);
 }
+
 .etoiles::after {
     color: var(--charte_gris);
     margin-left: 0px;
@@ -517,6 +504,7 @@ ul#liste_filtres {
 
 
 @media screen and (min-width: 768px) {
+
     a#nav_hebergements, a#nav_activites {
         border-bottom: 0;
         border-top: 2px solid transparent;
@@ -542,53 +530,36 @@ ul#liste_filtres {
         font-family: 'Raleway';
     }
 
-    div#nav_border {
-        display: none;
-    }
-
     footer {
         justify-content: space-between;
-        padding: 0 5%;
+        padding: 0 5% 2rem 5%;
+    }
+      
+    nav img {
+        padding-left: 0;
     }
 
-    footer section {
-        margin: 1rem 0;
-    }
-        
-    header nav {
-        grid-template-columns: 1fr repeat(3, 130px);
+    nav {
+        grid-template-columns: 1fr repeat(3, 150px);
         grid-template-areas:
             "logo hebergements activites inscrire";
-        display: grid;
         margin: auto;
-        row-gap: 0;
         width: 90%;
-        grid-template-rows: 75px;
+        grid-template-rows: 100px;
     }
-    
-    header img {
-        padding-left: 0;
-    }
-    
-    section#section_populaire h2 {
-        padding-left: 0;
-    }
+
     
     input#lieu {
         width: 240px;
     }
 
     main {
-        display: flex;
         flex-wrap: nowrap;
-        flex-direction: row;
         align-items: start;
-        margin: auto;
-        /* justify-content: space-between; */
+        margin: auto auto 2rem auto;
         width: 90%;
         column-gap: 40px;
     }
-
 
     main section {
         background-color: var(--charte_gris);
@@ -596,16 +567,11 @@ ul#liste_filtres {
         display: flex;
         flex-wrap: wrap;
         margin: 0;
-        /* padding: 1rem; */
     }
 
     main section h2 {
         margin: 0;
         padding: 0;
-    }
-
-    nav #nav_principal {
-        margin: auto;    
     }
 
     section#section_activites {
@@ -618,30 +584,9 @@ ul#liste_filtres {
         column-gap: 25px;
         row-gap: 30px;
         grid-template-rows: 70px 250px 250px 250px 250px;
+        margin-bottom: 2rem;
     }
 
-    section#section_hebergements article {
-        /* height: 200px; */
-        width: 100%;
-        /* max-width: 230px; */
-        margin: auto 0;
-    }
-
-    
-    section#section_populaire article {
-        width: 100%;
-        margin: auto 0;
-        min-width: 250px;
-    }
-
-
-    section#section_populaire h2 {
-        width: 100%;
-    }
-
-    section#section_activites img {
-        height: calc(100% - 50px);
-    }
     section#section_activites article {
         height: 100%;        
     }
@@ -673,55 +618,63 @@ ul#liste_filtres {
         grid-area: titre;
     }
 
+    section#section_activites img {
+        height: calc(100% - 50px);
+    }
+
     section#section_hebergements {
        width: calc(60% - 20px);
        padding: 2rem;
-       /* justify-content: space-evenly; */
     }
 
+    section#section_hebergements article {
+        margin: auto 0;
+    }
 
     section#section_populaire {
         width: calc(40% - 20px);
         padding: 2rem;
     }
 
+    section#section_populaire article {
+        width: 100%;
+        margin: auto 0;
+        min-width: 250px;
+    }
 
+    section#section_populaire h2 {
+        width: 100%;
+        padding-left: 0;
+    }
+
+    section#section_recherche {
+        margin: 0 auto 1.25rem auto;
+    }
 }
 
 @media screen and (min-width: 992px) {
 
-
-
     section#section_activites {
-        /* width: 90%; */
         grid-template-areas:
             "titre titre titre titre"
             "a1 a2 a4 a5"
             "a1 a2 a4 ."
             "a1 . a4 a6"
             "a1 a3 a4 a6";
-        column-gap: 25px;
         row-gap: 0;
-        grid-template-rows: 70px 200px 50px 50px 200px;
+        grid-template-rows: 70px 180px 50px 50px 180px;
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
-
     section#section_hebergements {
-       width: calc(70% - 20px);
-       padding: 2rem;
+       width: calc(70% - 20px);   
+       justify-content: space-between;       
+       align-content: space-evenly;
     }
 
-
-    section#section_populaire {
-        width: calc(30% - 20px);
-        padding: 2rem;
-    }
-    
-    section#section_hebergements {
-        justify-content: space-between;       
-        align-content: space-evenly;
-       
+    section#section_hebergements article {
+        max-width: 250px;
+        margin-right: 5px;
     }
 
     section#section_hebergements h2, section#section_hebergements > P {
@@ -729,23 +682,13 @@ ul#liste_filtres {
     }
 
     section#section_populaire {
-        
+        width: calc(30% - 20px);
+        padding: 2rem;
     }
-
+    
     section#section_populaire article { 
         height: 100%;
     }
-
-    section#section_hebergements article {
-        /* height: 100%; */
-        max-width: 250px;
-        margin-right: 5px;
-    }
-
-
-   
-
-footer section {/* width: 100%; */}
 
 }
 
@@ -754,8 +697,7 @@ footer section {/* width: 100%; */}
 
     body {
         max-width: 100vw;
-    }
+    }   
 
-   
 }
 
