@@ -696,8 +696,9 @@ ul#liste_filtres {
 @media screen AND (min-width: 1024px) {
 
     body {
-        max-width: 100vw;
-    }   
+        max-width: 1440px;
+    }  
+
 
 }
 
